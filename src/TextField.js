@@ -1,13 +1,33 @@
 import React,{Component  } from "react";
-import { TextInput, View } from "react-native";
+import { TextInput, View, StyleSheet } from "react-native";
 
-function TextField() {
+const TextField = ({label, onChange, value, keyboardType, returnKeyType, nextButtonAction}) => {
     return(
-        <TextInput style={{backgroundColor: 'yellow', margin: 20, height:50}}>
-                    <View style={{backgroundColor: 'ligh-gray', height: 1, margin: 20}}></View>
-
+        <TextInput 
+        placeholder = {label} 
+        onChangeText={onChange} 
+        placeholderTextColor='gray' 
+        value={value} 
+        keyboardType={keyboardType}
+        returnKeyType={returnKeyType}
+        onSubmitEditing={nextButtonAction}
+        style={styles.textField1}>
         </TextInput>
     );
 }
 
 export default TextField;
+
+const styles = StyleSheet.create({
+    textField1: {
+        margin: 20, 
+        height:50,
+        fontSize: 25, 
+        fontWeight: '200', 
+        borderBottomColor: 'gray', 
+        color: 'black', 
+        borderBottomWidth: 1,
+        fontSize: 18,
+        fontWeight: '500'
+    }
+});
