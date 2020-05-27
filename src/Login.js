@@ -1,9 +1,8 @@
 import React, {Component  } from "react";
-import { View, SafeAreaView, Touchable, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { View, SafeAreaView, Touchable, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import TextField from './TextField.js';
 import HeaderView from "./HeaderView.js";
 import CommonButton from "./CommonButton.js";
-
 
 class Login extends Component {
 
@@ -41,6 +40,8 @@ class Login extends Component {
         }
       }
 
+      myCallBack = () => {}
+
     render() {
         return (
         <SafeAreaView style={{flex: 1}}>
@@ -57,18 +58,21 @@ class Login extends Component {
             nextButtonAction = {() => this.onClickListner('next')}
              ></TextField>
 
-            <TextField label = 'Password' 
+             <View style = {{margin: 20, flexDirection: 'row', alignItems: 'center', backgroundColor: 'green', height:50}}>
+            <TextField style={{ backgroundColor: 'red'}} label = 'Password' 
             onChange={(text) => {
               this.setState({password: text})
             }}
             value={this.state.password}
             ></TextField>
+            <Image style = {{ backgroundColor: 'yellow'}} source = {require('../Images/eye.png')} style = {{width: 40, height: 40}}></Image>
+            </View>
 
             <TouchableOpacity style={styles.forgotPasswordButton}>
               <Text style = {styles.forgotPasswordText}>forgot password?</Text>
             </TouchableOpacity>
 
-            <CommonButton title></CommonButton>
+            <CommonButton title={'Login'}></CommonButton>
         </SafeAreaView>
         )
     }
