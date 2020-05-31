@@ -21,10 +21,6 @@ class ForgotPassword extends Component {
         }
       }
 
-    //   onPress1 = () => {
-    //       alert('success true')
-    //   }
-
     myCallback = () => {
         alert('success');
       };

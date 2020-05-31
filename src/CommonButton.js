@@ -4,13 +4,13 @@ import { PropTypes } from 'react'
 
 class CommonButton extends Component {
 
-    onPressBtn = value => {
-        this.props.callback(value);
+    onPressBtn = () => {
+        this.props.callback();
       };
 
     render() {
         return (
-            <TouchableOpacity style = {styles.yellowButton} onPress={() => this.onPressBtn('React')} >
+            <TouchableOpacity style = {styles.yellowButton} onPress={() => this.onPressBtn()} >
                 <Text style = {styles.loginText}>{this.props.title}</Text>
             </TouchableOpacity>
         )
