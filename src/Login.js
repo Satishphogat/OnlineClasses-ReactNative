@@ -7,6 +7,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ForgotPassword from './ForgotPassword.js'
 
+import TabNavigator from '../Routes/TabNavigator.js'
+
 class Login extends Component {
 
     constructor(props) {
@@ -53,7 +55,8 @@ class Login extends Component {
       }
 
       loginButtonAction = () => {
-        this.props.navigation.navigate('ForgotPassword')
+         <TabNavigator></TabNavigator>
+        // this.props.navigation.navigate('ForgotPassword')
       }
 
     render() {
