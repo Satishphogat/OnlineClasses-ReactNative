@@ -22,7 +22,7 @@ class ForgotPassword extends Component {
       }
 
     myCallback = () => {
-        alert('success');
+      this.props.navigation.navigate('Login')
       };
 
     render() {

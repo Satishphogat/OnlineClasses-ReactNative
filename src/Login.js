@@ -3,6 +3,9 @@ import { View, SafeAreaView, Touchable, TouchableOpacity, Text, StyleSheet, Imag
 import TextField from './TextField.js';
 import HeaderView from "./HeaderView.js";
 import CommonButton from "./CommonButton.js";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import ForgotPassword from './ForgotPassword.js'
 
 class Login extends Component {
 
@@ -26,6 +29,8 @@ class Login extends Component {
               console.log(type)
               break
           case 'forgotPassword':
+            console.log('success')
+            this.props.navigation.navigate('ForgotPassword')
             break
           case 'showHidePassword':
             this.showHidePress()
@@ -47,7 +52,9 @@ class Login extends Component {
         this.setState({isPasswordSecure: !this.state.isPasswordSecure})
       }
 
-      myCallBack = () => {}
+      loginButtonAction = () => {
+        this.props.navigation.navigate('ForgotPassword')
+      }
 
     render() {
         return (
@@ -77,11 +84,11 @@ class Login extends Component {
             <Image source = {this.state.isPasswordSecure ? require('../Images/eye.png') : require('../Images/closeEye.png')} style = {{width: 40, height: 40}}></Image>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.forgotPasswordButton}>
+            <TouchableOpacity style={styles.forgotPasswordButton} onPress = {() => this.onClickListner('forgotPassword')}>
               <Text style = {styles.forgotPasswordText}>forgot password?</Text>
             </TouchableOpacity>
 
-            <CommonButton title={'Login'}></CommonButton>
+            <CommonButton callback={this.loginButtonAction} title={'Login'}></CommonButton>
         </SafeAreaView>
         )
     }
