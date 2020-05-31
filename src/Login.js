@@ -55,8 +55,7 @@ class Login extends Component {
       }
 
       loginButtonAction = () => {
-         <TabNavigator></TabNavigator>
-        // this.props.navigation.navigate('ForgotPassword')
+        this.props.navigation.navigate('Home')
       }
 
     render() {

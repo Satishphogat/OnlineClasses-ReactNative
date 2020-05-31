@@ -25,7 +25,6 @@ class Home extends Component {
                     ListHeaderComponent={this.liveClassView}
                     stickyHeaderIndices={[0]}
                 >
-                    
 
                 </SectionList>
             </SafeAreaView>

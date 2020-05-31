@@ -5,6 +5,7 @@ import {Text, View} from 'react-native'
 import 'react-native-gesture-handler';
 import Login from '../src/Login.js';
 import ForgotPassword from '../src/ForgotPassword.js';
+import TabNavigator from './TabNavigator.js'
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,7 @@ const AppNavigator = () => {
           <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}></Stack.Screen>
           <Stack.Screen name="ForgotPassword" component={ForgotPassword}></Stack.Screen>
+          <Stack.Screen name="Home" component={TabNavigator}></Stack.Screen>
           </Stack.Navigator>
       )
 }

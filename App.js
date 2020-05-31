@@ -15,8 +15,8 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        {/* <AppNavigator></AppNavigator> */}
-        <TabNavigator></TabNavigator>
+        <AppNavigator></AppNavigator>
+        {/* <TabNavigator></TabNavigator> */}
       </NavigationContainer>
     )
   }
