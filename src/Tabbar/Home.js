@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
-import { SectionList, View, StyleSheet, Text, SafeAreaView, Image } from 'react-native';
+import { SectionList, View, StyleSheet, Text, SafeAreaView, Image, TouchableHighlight } from 'react-native';
 import Constant from '../Utility/Constant.js'
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import CustomColor from '../Utility/Constant.js';
+import CustomCard from '../Components/CustomCard.js'
 
 class Home extends Component {
+
+    onPressLiveImage = () =>{
+        alert('success')
+    }
 
     liveClassView = () => {
         return <View style={styles.liveClass} >
             {/* <Image source={LocalImages.liveImage} /> */}
-            <Text style = {{color: 'white', fontSize: 24, fontWeight: '800'}}>LIVE CLASSES</Text>
+            <TouchableHighlight onPress={this.onPressLiveImage}>
+                <Text style = {{color: CustomColor.white, fontSize: 24, fontWeight: '800'}}>LIVE CLASSES
+                </Text>
+            </TouchableHighlight>
         </View>
       };
 
@@ -16,10 +27,12 @@ class Home extends Component {
             <SafeAreaView>
 
                 <SectionList sections={[
-                    { title: 'Upcomming Classes', data: ['Success'] },
+                    { title: 'Upcomming Classes', data: ['Success', 'Success'] },
                     { title: 'Recent Classes', data: ['Success'] },
                 ]}
-                    renderItem={({ item }) => <Text style={styles.liveClass}>{item.section}</Text>}
+                    renderItem={({ item }) => 
+                    <CustomCard></CustomCard>}
+
                     renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
                     keyExtractor={(item, index) => index}
                     ListHeaderComponent={this.liveClassView}
@@ -49,7 +62,6 @@ const styles = StyleSheet.create({
         padding: 10,
         fontSize: 18,
         fontWeight: '600',
-        backgroundColor: 'rgba(247,247,247,1.0)',
         height: 44,
         flexDirection: 'row',
         alignItems: 'center',
@@ -58,5 +70,7 @@ const styles = StyleSheet.create({
         padding: 10,
         fontSize: 18,
         height: 44,
+
     },
+
 })
