@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
+import { PropTypes } from 'react'
 
 class CommonButton extends Component {
 
-    onPressBtn = () => {
-         //this.props.callBack();
-    };
+    onPressBtn = value => {
+        this.props.callback(value);
+      };
 
     render() {
         return (
-            <TouchableOpacity style = {styles.yellowButton} onPress = {this.onPressBtn()} >
+            <TouchableOpacity style = {styles.yellowButton} onPress={() => this.onPressBtn('React')} >
                 <Text style = {styles.loginText}>{this.props.title}</Text>
             </TouchableOpacity>
         )

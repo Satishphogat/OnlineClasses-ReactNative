@@ -53,7 +53,7 @@ class Login extends Component {
         return (
         <SafeAreaView style={{flex: 1}}>
 
-            <HeaderView></HeaderView>
+            <HeaderView title='Login'></HeaderView>
 
             <TextField label = 'Email' 
             onChange={(text) => {

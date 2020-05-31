@@ -1,12 +1,26 @@
 import React, {Component  } from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-function HeaderView() {
+const HeaderView = ({title}) => {
     return(
-        <View style={{height: 200, width: '100%', alignItems: 'center', flexDirection: 'row', justifyContent: 'center'}}>
-            <Text style={{fontSize: 30, fontWeight: 'bold'}}>Log in</Text>
+        <View style={styles.container}>
+            <Text style={styles.text}>{title}</Text>
         </View>
     )
 }
 
 export default HeaderView;
+
+const styles = StyleSheet.create({
+    container: {
+    height: 200,
+    width: '100%',
+    alignItems: 'center', 
+    flexDirection: 'row', 
+    justifyContent: 'center'
+    },
+    text: {
+        fontSize: 30, 
+        fontWeight: 'bold'
+    }
+})
