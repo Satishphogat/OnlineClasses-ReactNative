@@ -12,12 +12,12 @@ class Login extends Component {
         this.state = {
           id: '',
           password: '',
-          isLoginValid: false
+          isLoginValid: false,
+          isPasswordSecure: true
         };
       }
 
       onClickListner(type) {
-        alert(type)
         switch(type) {
           case 'keyboardNext':
             console.log(type)
@@ -26,7 +26,9 @@ class Login extends Component {
               console.log(type)
               break
           case 'forgotPassword':
-
+            break
+          case 'showHidePassword':
+            this.showHidePress()
         }
       }
 
@@ -38,6 +40,11 @@ class Login extends Component {
         } else {
           isLoginValid = true
         }
+      }
+
+      showHidePress = () => {
+        console.log(this.state.isPasswordSecure)
+        this.setState({isPasswordSecure: !this.state.isPasswordSecure})
       }
 
       myCallBack = () => {}
@@ -58,15 +65,17 @@ class Login extends Component {
             nextButtonAction = {() => this.onClickListner('next')}
              ></TextField>
 
-             <View style = {{margin: 20, flexDirection: 'row', alignItems: 'center', backgroundColor: 'green', height:50}}>
-            <TextField style={{ backgroundColor: 'red'}} label = 'Password' 
+            <TextField style={{ }} label = 'Password' 
             onChange={(text) => {
               this.setState({password: text})
             }}
             value={this.state.password}
+            secureTextEntry={this.state.isPasswordSecure}
             ></TextField>
-            <Image style = {{ backgroundColor: 'yellow'}} source = {require('../Images/eye.png')} style = {{width: 40, height: 40}}></Image>
-            </View>
+
+            <TouchableOpacity onPress = {() => this.onClickListner('showHidePassword')} style = {styles.showHideContainer}>
+            <Image source = {this.state.isPasswordSecure ? require('../Images/eye.png') : require('../Images/closeEye.png')} style = {{width: 40, height: 40}}></Image>
+            </TouchableOpacity>
 
             <TouchableOpacity style={styles.forgotPasswordButton}>
               <Text style = {styles.forgotPasswordText}>forgot password?</Text>
@@ -93,5 +102,12 @@ const styles = StyleSheet.create ({
     color: 'black', 
     fontSize: 16, 
     fontWeight: '400'
+  }, 
+  showHideContainer: {
+    width: 40, 
+    height: 40, 
+    top: -65,  
+    alignSelf: 'flex-end', 
+    marginHorizontal: 40
   }
 })
