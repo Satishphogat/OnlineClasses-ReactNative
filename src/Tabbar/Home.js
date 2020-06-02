@@ -27,7 +27,7 @@ class Home extends Component {
             <SafeAreaView>
 
                 <SectionList sections={[
-                    { title: 'Upcomming Classes', data: ['Success', 'Success'] },
+                    { title: 'Upcomming Classes', data: ['Success'] },
                     { title: 'Recent Classes', data: ['Success'] },
                 ]}
                     renderItem={({ item }) => 
@@ -60,11 +60,13 @@ const styles = StyleSheet.create({
     },
     sectionHeader: {
         padding: 10,
+        paddingHorizontal: 16,
         fontSize: 18,
         fontWeight: '600',
         height: 44,
         flexDirection: 'row',
         alignItems: 'center',
+        backgroundColor: CustomColor.lightGrayThemeColor
     },
     item: {
         padding: 10,

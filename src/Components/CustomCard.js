@@ -17,7 +17,7 @@ export default CustomCard;
 const styles = StyleSheet.create({
     container: {
         backgroundColor: CustomColor.lightGrayThemeColor, 
-        height: 150, 
+        height: 170, 
         flexDirection: 'row'
     },
     card: {
@@ -25,8 +25,9 @@ const styles = StyleSheet.create({
         flex: 0.7, 
         borderRadius: 5, 
         shadowColor: CustomColor.lightGray, 
-        shadowOpacity: 0.2, 
+        shadowOpacity: 1.0, 
         marginHorizontal: 16, 
+        marginVertical: 5,
         shadowOffset: { width: 0, height: 0 },
     }
 })
