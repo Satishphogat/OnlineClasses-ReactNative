@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { View, SafeAreaView } from "react-native";
-import HeaderView from "./HeaderView.js";
-import TextField from './TextField';
-import CommonButton from './CommonButton';
 import { PropTypes } from 'react'
+
+import HeaderView from '../../Components/HeaderView.js';//'../../Components/HeaderView.js';
+import TextField from '../../Components/TextField.js';
+import CommonButton from '../../Components/CommonButton';
 
 class ForgotPassword extends Component {
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, StyleSheet, Image} from 'react-native';
-import CustomColor from '../Utility/Constant';
+import CustomColor from '../Utility/Constant.js';
 
 const CustomCard = () => {
     return (

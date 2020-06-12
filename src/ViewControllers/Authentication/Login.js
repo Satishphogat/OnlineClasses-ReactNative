@@ -1,14 +1,15 @@
 import React, {Component  } from "react";
 import { View, SafeAreaView, Touchable, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
-import TextField from './TextField.js';
-import HeaderView from "./HeaderView.js";
-import CommonButton from "./CommonButton.js";
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ForgotPassword from './ForgotPassword.js'
-import Constant from '.../Constant.js'
 
-import TabNavigator from '../Routes/TabNavigator.js'
+import TextField from '../../Components/TextField.js';//'.../Components/TextField.js';
+import HeaderView from '../../Components/HeaderView.js';
+import CommonButton from '../../Components/CommonButton.js';
+
+import TabNavigator from '../../Routes/TabNavigator.js';//'.././Routes/TabNavigator.js'
 import { Images } from "../../Utility/Constant.js";
 
 class Login extends Component {
@@ -65,7 +66,7 @@ class Login extends Component {
         <SafeAreaView style={{flex: 1}}>
 
             <HeaderView title='Login'></HeaderView>
-
+            
             <TextField label = 'Email' 
             onChange={(text) => {
               this.setState({id: text.replace(/\s/g, '')})

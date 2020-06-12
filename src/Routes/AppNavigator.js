@@ -3,8 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React, {Component} from 'react'
 import {Text, View, StyleSheet} from 'react-native'
 import 'react-native-gesture-handler';
-import Login from '../src/Login.js';
-import ForgotPassword from '../src/ForgotPassword.js';
+import Login from '../ViewControllers/Authentication/Login.js';
+import ForgotPassword from '../ViewControllers/Authentication/ForgotPassword.js';
 import TabNavigator from './TabNavigator.js'
 import DrawerNavigator from './DrawerNavigator.js'
 

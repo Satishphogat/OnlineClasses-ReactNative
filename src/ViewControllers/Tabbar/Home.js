@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { SectionList, View, StyleSheet, Text, SafeAreaView, Image, TouchableHighlight } from 'react-native';
-import Constant from '../Utility/Constant.js'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import CustomColor from '.../Utility/Constant.js';
-import CustomCard from '../Components/CustomCard.js'
+import CustomColor from '../../Utility/Constant.js';//'../../Utility/Constant.js';
+import CustomCard from '../../Components/CustomCard.js';
 
 class Home extends Component {
 
