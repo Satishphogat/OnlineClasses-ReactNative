@@ -3,8 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, {Component} from 'react'
 import {Text, View} from 'react-native'
 import 'react-native-gesture-handler';
-import Home from '../src/Tabbar/Home.js';
-import Settings from '../src/Tabbar/Settings.js';
+import Home from '../ViewControllers/Tabbar/Home.js';
+import Settings from '../ViewControllers/Tabbar/Settings.js';
 
 const Tab = createBottomTabNavigator();
 

@@ -6,8 +6,10 @@ import CommonButton from "./CommonButton.js";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ForgotPassword from './ForgotPassword.js'
+import Constant from '.../Constant.js'
 
 import TabNavigator from '../Routes/TabNavigator.js'
+import { Images } from "../../Utility/Constant.js";
 
 class Login extends Component {
 
@@ -83,7 +85,7 @@ class Login extends Component {
             ></TextField>
 
             <TouchableOpacity onPress = {() => this.onClickListner('showHidePassword')} style = {styles.showHideContainer}>
-            <Image source = {this.state.isPasswordSecure ? require('../Images/eye.png') : require('../Images/closeEye.png')} style = {{width: 40, height: 40}}></Image>
+            <Image source = {this.state.isPasswordSecure ? Images.eye : Images.closeEye} style = {{width: 40, height: 40}}></Image>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.forgotPasswordButton} onPress = {() => this.onClickListner('forgotPassword')}>

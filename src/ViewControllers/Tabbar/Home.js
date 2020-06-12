@@ -3,7 +3,7 @@ import { SectionList, View, StyleSheet, Text, SafeAreaView, Image, TouchableHigh
 import Constant from '../Utility/Constant.js'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import CustomColor from '../Utility/Constant.js';
+import CustomColor from '.../Utility/Constant.js';
 import CustomCard from '../Components/CustomCard.js'
 
 class Home extends Component {
