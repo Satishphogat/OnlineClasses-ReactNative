@@ -7,16 +7,18 @@ import Login from '../ViewControllers/Authentication/Login.js';
 import ForgotPassword from '../ViewControllers/Authentication/ForgotPassword.js';
 import TabNavigator from './TabNavigator.js'
 import DrawerNavigator from './DrawerNavigator.js'
+import SideMenu from '../ViewControllers/SideMenu/SideMenu.js';
 
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
     return (
-          <Stack.Navigator options={{gestureEnabled: false}}>
-          <Stack.Screen name="Login" component={Login} options={{headerShown: false, gestureEnabled: false}}></Stack.Screen>
-          <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{title: "", gestureEnabled: false, headerTransparent: true}}></Stack.Screen>
+          <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login}></Stack.Screen>
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword} ></Stack.Screen>
+          <Stack.Screen name="SideMenu" component={SideMenu}></Stack.Screen>
           <Stack.Screen name="Home" component={TabNavigator} options={{title: "Home", gestureEnabled: false, headerTransparent: true}}></Stack.Screen>
-          <Stack.Screen name="drawer" component={DrawerNavigator} options={{title: "Settings", gestureEnabled: false, headerTransparent: true}}></Stack.Screen>
+          <Stack.Screen name="drawer" component={DrawerNavigator} options={{title: "Settings", headerTransparent: true}}></Stack.Screen>
 
           </Stack.Navigator>
       )

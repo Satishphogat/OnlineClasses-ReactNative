@@ -6,6 +6,10 @@ export const Images = {
     filledHome: require('../Assets/Images/filledHome.png'),
     home: require('../Assets/Images/home.png'),
     liveClass: require('../Assets/Images/liveClass.jpg'),
+    notification: require('../Assets/Images/notification.png'),
+    contactUs: require('../Assets/Images/contact-us.png'),
+    logout: require('../Assets/Images/logout.png'),
+    profile: require('../Assets/Images/profile.jpg'),
 };
 
 export default CustomColor = {

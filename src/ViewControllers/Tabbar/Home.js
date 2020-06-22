@@ -44,6 +44,8 @@ class Home extends Component {
           <Cards></Cards>
         }
           renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+          ListHeaderComponent={() => this.liveClassView}
+          stickyHeaderIndices={[0]}
           // keyExtractor={(item, index) => index}
         />
       </SafeAreaView>
@@ -74,28 +76,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: CustomColor.lightGrayThemeColor
   },
-  // item: {
-  //     padding: 10,
-  //     fontSize: 18,
-  //     height: 44,
-
-  // },
-  item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    height: 100,
-  },
   title: {
     fontSize: 32,
-  },
-  card: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 8,
-    width: 300,
-    borderRadius: 5,
-  },
+  }
 })

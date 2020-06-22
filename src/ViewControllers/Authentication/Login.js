@@ -12,6 +12,9 @@ import CommonButton from '../../Components/CommonButton.js';
 import TabNavigator from '../../Routes/TabNavigator.js';//'.././Routes/TabNavigator.js'
 import { Images } from "../../Utility/Constant.js";
 
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import SideMenu from '../SideMenu/SideMenu.js'
+
 class Login extends Component {
 
     constructor(props) {
@@ -58,7 +61,8 @@ class Login extends Component {
       }
 
       loginButtonAction = () => {
-        this.props.navigation.navigate('Home')
+        // this.props.navigation.openDrawer();      // this.props.navigation.openDrawer()
+        this.props.navigation.navigate('SideMenu')
       }
 
     render() {
