@@ -8,18 +8,21 @@ import ForgotPassword from '../ViewControllers/Authentication/ForgotPassword.js'
 import TabNavigator from './TabNavigator.js'
 import DrawerNavigator from './DrawerNavigator.js'
 import SideMenu from '../ViewControllers/SideMenu/SideMenu.js';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+// import Icon from 'react-native-vector-icons/Ionicons'
 
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const AppNavigator = () => {
     return (
           <Stack.Navigator>
-          <Stack.Screen name="Login" component={Login}></Stack.Screen>
-          <Stack.Screen name="ForgotPassword" component={ForgotPassword} ></Stack.Screen>
-          <Stack.Screen name="SideMenu" component={SideMenu}></Stack.Screen>
-          <Stack.Screen name="Home" component={TabNavigator} options={{title: "Home", gestureEnabled: false, headerTransparent: true}}></Stack.Screen>
-          <Stack.Screen name="drawer" component={DrawerNavigator} options={{title: "Settings", headerTransparent: true}}></Stack.Screen>
 
+          <Stack.Screen name="Login" 
+          component={Login} >
+          </Stack.Screen>
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword} ></Stack.Screen>
+          <Stack.Screen name="Home" component={TabNavigator} options={{title: "Home", gestureEnabled: false, headerTransparent: true}}></Stack.Screen>
           </Stack.Navigator>
       )
 }

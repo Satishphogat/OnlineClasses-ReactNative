@@ -62,7 +62,7 @@ class Login extends Component {
 
       loginButtonAction = () => {
         // this.props.navigation.openDrawer();      // this.props.navigation.openDrawer()
-        this.props.navigation.navigate('SideMenu')
+        this.props.navigation.navigate('Home')
       }
 
     render() {
