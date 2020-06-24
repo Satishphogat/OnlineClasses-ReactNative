@@ -44,7 +44,7 @@ class Home extends Component {
           <Cards></Cards>
         }
           renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
-          ListHeaderComponent={() => this.liveClassView}
+          ListHeaderComponent={this.liveClassView}
           stickyHeaderIndices={[0]}
           // keyExtractor={(item, index) => index}
         />
