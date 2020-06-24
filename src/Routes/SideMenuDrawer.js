@@ -4,14 +4,14 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from '../ViewControllers/Tabbar/Home.js';
 import SideMenu from '../ViewControllers/SideMenu/SideMenu.js';
-import Settings from '../ViewControllers/Tabbar/Settings.js';
+import Settings from '../ViewControllers/Tabbar/Settings';
 
 const Drawer = createDrawerNavigator();
 
-export default function SettingDrawerNavigator() {
+export default function SideMenuDrawer() {
   return (
-      <Drawer.Navigator initialRouteName="Settings">
-        <Drawer.Screen name="Settings" component={Settings} />
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="SideMenu" component={SideMenu} />
       </Drawer.Navigator>
   );

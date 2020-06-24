@@ -16,7 +16,7 @@ export default function TabNavigator() {
   return (
       <Tab.Navigator>
         <Tab.Screen name="Home" component={SideMenuDrawer} ></Tab.Screen>
-        <Tab.Screen name="Settings" component={SideMenuDrawer} ></Tab.Screen>
+        <Tab.Screen name="Settings" component={SettingDrawerNavigation} ></Tab.Screen>
       </Tab.Navigator>
   );
 }

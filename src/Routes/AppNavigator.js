@@ -21,7 +21,6 @@ const AppNavigator = () => {
           </Stack.Screen>
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} ></Stack.Screen>
           <Stack.Screen name="Home" component={TabNavigator} options={{title: "Home1", gestureEnabled: false, headerTransparent: true}}></Stack.Screen>
-          
           </Stack.Navigator>
       )
 }
