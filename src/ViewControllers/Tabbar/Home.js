@@ -35,7 +35,7 @@ class Home extends Component {
       <SafeAreaView>
 
         <SectionList
-        style = {{top: 50}}
+        style = {{top: 0}}
           sections={[
             { title: 'Upcomming classes', data: ['ALTERED'] },
             { title: 'Recent classes', data: ['BEST MEN'] },

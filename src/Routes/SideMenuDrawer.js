@@ -10,8 +10,8 @@ const Drawer = createDrawerNavigator();
 
 export default function SideMenuDrawer() {
   return (
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Navigator initialRouteName="Home" screenOptions={{}}>
+        <Drawer.Screen name="Home" component={Home}  />
         <Drawer.Screen name="SideMenu" component={SideMenu} />
       </Drawer.Navigator>
   );
