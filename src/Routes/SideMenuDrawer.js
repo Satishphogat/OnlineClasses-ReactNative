@@ -7,6 +7,7 @@ import SideMenu from '../ViewControllers/SideMenu/SideMenu.js';
 import Settings from '../ViewControllers/Tabbar/Settings';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Images } from '../Utility/Constant.js'
+import { BottomTabBar } from '@react-navigation/bottom-tabs';
 
 const Drawer = createDrawerNavigator();
 

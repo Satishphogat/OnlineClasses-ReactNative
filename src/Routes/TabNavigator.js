@@ -14,7 +14,16 @@ const Tab = createBottomTabNavigator();
 export default function TabNavigator() {
   return (
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={SideMenuDrawer} ></Tab.Screen>
+        <Tab.Screen name="Home" component={SideMenuDrawer} options={{
+          headerTitle: props => <LogoTitle {...props} />,
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is a button!')}
+              title="Info"
+              color="#fff"
+            />
+          ),
+        }}></Tab.Screen>
         <Tab.Screen name="Settings" component={SettingDrawerNavigation} options={{headerShown: false}}></Tab.Screen>
       </Tab.Navigator>
   );
