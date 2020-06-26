@@ -9,7 +9,6 @@ import TabNavigator from './TabNavigator.js'
 import DrawerNavigator from './DrawerNavigator.js'
 import SideMenu from '../ViewControllers/SideMenu/SideMenu.js';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Icon from 'react-native-vector-icons/Octicons';
 import SideMenuDrawer from './SideMenuDrawer.js';
 
 const Stack = createStackNavigator();
