@@ -6,19 +6,14 @@ import ForgotPassword from './src/ViewControllers/Authentication/ForgotPassword.
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import AppNavigator from './src/Routes/AppNavigator.js'
 import TabNavigator from './src/Routes/TabNavigator.js'
-
-const Stack = createStackNavigator();
+import AppNavigator from './src/Routes/AppNavigator.js';
+import DrawerNavigator from './src/Routes/SideMenuDrawer.js';
 
 export default class App extends Component {
   render() {
     return (
-      <NavigationContainer>
-        <AppNavigator>
-        </AppNavigator>
-        {/* <DrawerNavigator></DrawerNavigator> */}
-      </NavigationContainer>
+          <DrawerNavigator />
     )
   }
 }
