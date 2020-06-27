@@ -8,7 +8,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import AppNavigator from './src/Routes/AppNavigator.js'
 import TabNavigator from './src/Routes/TabNavigator.js'
-import DrawerNavigator from './src/Routes/DrawerNavigator'
 
 const Stack = createStackNavigator();
 

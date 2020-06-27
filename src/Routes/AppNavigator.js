@@ -6,7 +6,6 @@ import 'react-native-gesture-handler';
 import Login from '../ViewControllers/Authentication/Login.js';
 import ForgotPassword from '../ViewControllers/Authentication/ForgotPassword.js';
 import TabNavigator from './TabNavigator.js'
-import DrawerNavigator from './DrawerNavigator.js'
 import SideMenu from '../ViewControllers/SideMenu/SideMenu.js';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import SideMenuDrawer from './SideMenuDrawer.js';

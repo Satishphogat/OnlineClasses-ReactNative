@@ -5,7 +5,6 @@ import {Text, View} from 'react-native'
 import 'react-native-gesture-handler';
 import Home from '../ViewControllers/Tabbar/Home.js';
 import Settings from '../ViewControllers/Tabbar/Settings.js';
-import DrawerNavigator from './DrawerNavigator.js';
 import SettingDrawerNavigation from './SettingDrawerNavigation.js';
 import SideMenuDrawer from './SideMenuDrawer.js';
 
