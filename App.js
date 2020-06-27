@@ -8,12 +8,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import TabNavigator from './src/Routes/TabNavigator.js'
 import AppNavigator from './src/Routes/AppNavigator.js';
-import DrawerNavigator from './src/Routes/SideMenuDrawer.js';
 
 export default class App extends Component {
   render() {
     return (
-          <DrawerNavigator />
+          <AppNavigator />
     )
   }
 }

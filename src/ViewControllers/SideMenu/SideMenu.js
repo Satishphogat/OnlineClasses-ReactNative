@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
-import { View, SafeAreaView, Text, StyleSheet, Image } from 'react-native'
+import { View, SafeAreaView, Text, StyleSheet, Image, Alert } from 'react-native'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 import Constant, { Images } from '../../Utility/Constant.js'
 import SeparatorView from '../../Components/SeparatorView.js'
 import renderSeparatorView from '../../Components/SeparatorView.js'
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from '../Tabbar/Home.js'
+import Login from '../Authentication/Login.js'
 
 const Data = [
     {
@@ -26,8 +31,24 @@ const Data = [
 
 export default class SideMenu extends Component {
 
+    logout = () => {
+
+        Alert.alert('Alert', 'Are you sure you want to logout!', 
+        [
+            {text: 'Cancel'},
+            {text: 'OK', onPress: () => this.props.navigation.navigate('Login')
+        }
+          ],
+          {cancelable: false},
+        )
+    }
+
     onPress = (item) => {
+        if (item.title == 'Logout') {
+            this.logout();
+        } else {
         alert(item.title);
+    }
     }
 
     renderSeparatorView = () => {
