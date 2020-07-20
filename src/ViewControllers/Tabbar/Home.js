@@ -5,6 +5,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import CustomColor from '../../Utility/Constant.js';//'../../Utility/Constant.js';
 import Cards from '../../Components/Cards.js';
+import { WebView } from "react-native-webview";
+
 
 function Item({ title }) {
   return (
@@ -21,14 +23,17 @@ class Home extends Component {
   }
 
   liveClassView = () => {
-    return <View style={styles.liveClass} >
-      {/* <Image source={LocalImages.liveImage} /> */}
-      <TouchableHighlight onPress={this.onPressLiveImage}>
-        <Text style={{ color: CustomColor.white, fontSize: 24, fontWeight: '800' }}>LIVE CLASSES
-                </Text>
-      </TouchableHighlight>
-    </View>
+    return <WebView source={{ uri: 'https://www.youtube.com' }} style={styles.liveClass} />
   };
+  //   <View style={styles.liveClass} >
+  //     {/* <Image source={LocalImages.liveImage} /> */}
+  //     <TouchableHighlight onPress={this.onPressLiveImage}>
+  //       <Text style={{ color: CustomColor.white, fontSize: 24, fontWeight: '800' }}>LIVE CLASSES
+  //               </Text>
+  //     </TouchableHighlight>
+  //     {/* <WebView source={{ uri: 'https://reactnative.dev/' }} /> */}
+  //   </View>
+  // };
 
   render() {
     return (
