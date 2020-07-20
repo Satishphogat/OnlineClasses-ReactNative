@@ -46,6 +46,8 @@ export default class SideMenu extends Component {
     onPress = (item) => {
         if (item.title == 'Logout') {
             this.logout();
+        } else if (item.title == 'Home') {
+            this.props.navigation.closeDrawer();
         } else {
         alert(item.title);
     }

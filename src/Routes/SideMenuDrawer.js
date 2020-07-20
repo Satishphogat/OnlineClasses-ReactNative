@@ -11,6 +11,8 @@ import { BottomTabBar } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 
+//AIzaSyAK7CWP3TFK0ke_hkUfZWu7Zwky2IVqZu8  API KEY YOUTUBE
+
 const drawerNavigator1 = createDrawerNavigator(
   {
       Home: {
@@ -27,7 +29,8 @@ const drawerNavigator1 = createDrawerNavigator(
       }
   },
   {
-      initialRouteName: 'Home'
+      initialRouteName: 'Home',
+      contentComponent: SideMenu
   }
 )
 
