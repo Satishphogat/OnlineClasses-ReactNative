@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import CustomColor from '../../Utility/Constant.js';//'../../Utility/Constant.js';
 import Cards from '../../Components/Cards.js';
 import { WebView } from "react-native-webview";
+import liveClass from './WebView/LiveClass.js'
 
 
 function Item({ title }) {
@@ -19,21 +20,22 @@ function Item({ title }) {
 class Home extends Component {
 
   onPressLiveImage = () => {
-    alert('success')
+    // alert('success')
+    this.props.navigation.navigate('LiveClass.js')
   }
 
   liveClassView = () => {
-    return <WebView source={{ uri: 'https://www.youtube.com' }} style={styles.liveClass} />
-  };
-  //   <View style={styles.liveClass} >
-  //     {/* <Image source={LocalImages.liveImage} /> */}
-  //     <TouchableHighlight onPress={this.onPressLiveImage}>
-  //       <Text style={{ color: CustomColor.white, fontSize: 24, fontWeight: '800' }}>LIVE CLASSES
-  //               </Text>
-  //     </TouchableHighlight>
-  //     {/* <WebView source={{ uri: 'https://reactnative.dev/' }} /> */}
-  //   </View>
+  //   return <WebView source={{ uri: 'https://www.youtube.com' }} style={styles.liveClass} />
   // };
+  return <View style={styles.liveClass} >
+      {/* <Image source={LocalImages.liveImage} /> */}
+      <TouchableHighlight onPress={this.onPressLiveImage}>
+        <Text style={{ color: CustomColor.white, fontSize: 24, fontWeight: '800' }}>LIVE CLASSES
+                </Text>
+      </TouchableHighlight>
+      {/* <WebView source={{ uri: 'https://reactnative.dev/' }} /> */}
+    </View>
+  };
 
   render() {
     return (
