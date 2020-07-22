@@ -10,6 +10,8 @@ export const Images = {
     contactUs: require('../Assets/Images/contact-us.png'),
     logout: require('../Assets/Images/logout.png'),
     profile: require('../Assets/Images/profile.jpg'),
+    play: require('../Assets/Images/play.png'),
+    math: require('../Assets/Images/math.jpg'),
 };
 
 export default CustomColor = {

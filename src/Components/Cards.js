@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text } from 'react-native';
-import Constant from '../Utility/Constant.js'
+import { SafeAreaView, View, FlatList, StyleSheet, Text, Image } from 'react-native';
+import Constant, { Images } from '../Utility/Constant.js'
 
 const DATA = [
   {
@@ -23,7 +23,8 @@ class Cards extends Component {
       data = {DATA}
       horizontal={true}
       renderItem={({item}) => 
-      <Text style={styles.card}>{item.title}</Text>
+      <Image style={styles.card} source={Images.math}></Image>
+      // <Text style={styles.card}>{item.title}</Text>
     }></FlatList>
     )}}
 
@@ -34,11 +35,11 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: CustomColor.lightGrayThemeColor,
     padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 8,
+    marginVertical: 12,
+    marginHorizontal: 10,
     width: 300,
     borderRadius: 5,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   title: {
     fontSize: 32,

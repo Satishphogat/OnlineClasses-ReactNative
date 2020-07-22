@@ -1,13 +1,14 @@
 
 import React, { Component } from 'react';
-import { SectionList, View, StyleSheet, Text, SafeAreaView, Image, TouchableHighlight, FlatList } from 'react-native';
+import { SectionList, View, StyleSheet, Text, SafeAreaView, Dimensions, Image, TouchableHighlight, FlatList } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import CustomColor from '../../Utility/Constant.js';//'../../Utility/Constant.js';
+import CustomColor, { Images } from '../../Utility/Constant.js';//'../../Utility/Constant.js';
 import Cards from '../../Components/Cards.js';
 import { WebView } from "react-native-webview";
 import liveClass from './WebView/LiveClass.js'
-
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Constant from '../../Utility/Constant.js'
 
 function Item({ title }) {
   return (
@@ -17,23 +18,45 @@ function Item({ title }) {
   );
 }
 
+// function overlay() {
+//   return (
+    
+//       <View style={{ height: 270, backgroundColor: 'clear', position: 'absolute', justifyContent: 'center', alignItems: 'center'}}>
+//       <TouchableOpacity onPress={this.onPressLiveImage} style={{backgroundColor: 'clear', height: 270, width: Dimensions.get('window').width, justifyContent: 'center', alignItems: 'center'}}>
+//       <Image source={Images.play} style = {{width: 80, height: 80}} />
+//       </TouchableOpacity>
+//       </View>
+
+//       <View style={{ height: 60, backgroundColor: 'clear', position: 'absolute', paddingRight: 10}}>
+//       <TouchableOpacity onPress={this.onPressLiveImage} style = {{width: 70, height: 40, backgroundColor: 'red', margin: 0, justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+//       <Text style={{color: 'white', fontSize: 22}}>LIVE</Text>
+//       </TouchableOpacity>
+//       </View>
+//   );
+// }
+
 class Home extends Component {
 
   onPressLiveImage = () => {
-    // alert('success')
-    this.props.navigation.navigate('LiveClass.js')
+    this.props.navigation.navigate('LiveClass')
   }
 
   liveClassView = () => {
-  //   return <WebView source={{ uri: 'https://www.youtube.com' }} style={styles.liveClass} />
-  // };
   return <View style={styles.liveClass} >
-      {/* <Image source={LocalImages.liveImage} /> */}
-      <TouchableHighlight onPress={this.onPressLiveImage}>
-        <Text style={{ color: CustomColor.white, fontSize: 24, fontWeight: '800' }}>LIVE CLASSES
-                </Text>
-      </TouchableHighlight>
-      {/* <WebView source={{ uri: 'https://reactnative.dev/' }} /> */}
+      <WebView source={{ uri: 'https://www.youtube.com' }} style={{flex: 1, justifyContent: 'center', height: 270}}    />
+      
+      <View style={{ height: 270, backgroundColor: 'clear', position: 'absolute', justifyContent: 'center', alignItems: 'center'}}>
+      <TouchableOpacity onPress={this.onPressLiveImage} style={{backgroundColor: 'clear', height: 270, width: Dimensions.get('window').width, justifyContent: 'center', alignItems: 'center'}}>
+      <Image source={Images.play} style = {{width: 80, height: 80}} />
+      </TouchableOpacity>
+      </View>
+
+      <View style={{ height: 60, backgroundColor: 'clear', position: 'absolute', paddingRight: 10}}>
+      <TouchableOpacity onPress={this.onPressLiveImage} style = {{width: 70, height: 40, backgroundColor: 'red', margin: 0, justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+      <Text style={{color: 'white', fontSize: 22}}>LIVE</Text>
+      </TouchableOpacity>
+      </View>
+      
     </View>
   };
 
@@ -65,9 +88,10 @@ export default Home;
 const styles = StyleSheet.create({
   liveClass: {
     height: 270,
+    width: '100%',
     backgroundColor: 'green',
-    justifyContent: 'center',
-    alignItems: 'center'
+    // justifyContent: 'center',
+    // alignItems: 'center'
   },
   container: {
     flex: 1,

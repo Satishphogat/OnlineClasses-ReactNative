@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { SafeAreaView, StyleSheet, Text } from 'react-native-safe-area-context'
 import { View } from 'react-native'
+import { WebView } from "react-native-webview";
 
 class LiveClass extends Component {
     render() {
         return (
-            <SafeAreaView>
-                <View style = {{backgroundColor: 'green', flex: 1}}></View>
+            <SafeAreaView style={{flex: 1, justifyContent: 'center', alignItems: "center"}}>
+                 <View style = {{backgroundColor: 'green', flex: 1, width: '100%', height: '100%'}}>
+                 <WebView source={{ uri: 'https://www.youtube.com' }} style={{width: '100%', height: '100%'}} />
+                </View> 
             </SafeAreaView>
         )
     }

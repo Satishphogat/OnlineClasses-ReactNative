@@ -7,6 +7,7 @@ import SideMenu from '../ViewControllers/SideMenu/SideMenu.js';
 import Settings from '../ViewControllers/Tabbar/Settings';
 import { Images } from '../Utility/Constant.js'
 import { BottomTabBar } from '@react-navigation/bottom-tabs';
+import HomeAppNavigator from './HomeStackNavigator.js'//'../ViewControllers/SideMenu/SideMenu.js';
 
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
@@ -16,7 +17,7 @@ import { createAppContainer } from 'react-navigation';
 const drawerNavigator1 = createDrawerNavigator(
   {
       Home: {
-          screen: Home,
+          screen: HomeAppNavigator,
           navigationOptions: {
               headerShown: false
           }
