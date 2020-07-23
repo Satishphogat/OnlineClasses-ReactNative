@@ -14,6 +14,7 @@ import Home from '../ViewControllers/Tabbar/Home.js';
 import LiveClass from '../ViewControllers/Tabbar/WebView/LiveClass.js';
 import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';  
 import Constant, { Images } from '../Utility/Constant.js'
+import ClassDetail from '../ViewControllers/Tabbar/ClassDetail/ClassDetail.js'
 
 const AppNavigator = createStackNavigator(
     {
@@ -33,6 +34,12 @@ const AppNavigator = createStackNavigator(
             screen: LiveClass,
             navigationOptions: {
                 headerShown: true,
+            }
+        },
+        ClassDetail: {
+            screen: ClassDetail,
+            navigationOptions: {
+                headerShown: true
             }
         }
     },

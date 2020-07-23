@@ -18,5 +18,11 @@ export const Images = {
 export default CustomColor = {
     lightGrayThemeColor : '#F5F7FA',
     white: 'white',
-    lightGray: '#D3D3D3'
+    lightGray: '#D3D3D3',
+    black: 'black'
 }
+
+export const Fonts = {
+    normal: 20
+}
+

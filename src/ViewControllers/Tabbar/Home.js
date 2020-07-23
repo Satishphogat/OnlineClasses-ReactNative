@@ -9,6 +9,7 @@ import { WebView } from "react-native-webview";
 import liveClass from './WebView/LiveClass.js'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Constant from '../../Utility/Constant.js'
+import ClassDetail from './ClassDetail/ClassDetail.js'
 
 function Item({ title }) {
   return (
@@ -21,6 +22,7 @@ function Item({ title }) {
 class Home extends Component {
   onPressLiveImage = () => {
     this.props.navigation.navigate('LiveClass')
+    // this.props.navigation.navigate('ClassDetail')
   }
 
   liveClassView = () => {
