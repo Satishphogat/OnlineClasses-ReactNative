@@ -18,25 +18,7 @@ function Item({ title }) {
   );
 }
 
-// function overlay() {
-//   return (
-    
-//       <View style={{ height: 270, backgroundColor: 'clear', position: 'absolute', justifyContent: 'center', alignItems: 'center'}}>
-//       <TouchableOpacity onPress={this.onPressLiveImage} style={{backgroundColor: 'clear', height: 270, width: Dimensions.get('window').width, justifyContent: 'center', alignItems: 'center'}}>
-//       <Image source={Images.play} style = {{width: 80, height: 80}} />
-//       </TouchableOpacity>
-//       </View>
-
-//       <View style={{ height: 60, backgroundColor: 'clear', position: 'absolute', paddingRight: 10}}>
-//       <TouchableOpacity onPress={this.onPressLiveImage} style = {{width: 70, height: 40, backgroundColor: 'red', margin: 0, justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
-//       <Text style={{color: 'white', fontSize: 22}}>LIVE</Text>
-//       </TouchableOpacity>
-//       </View>
-//   );
-// }
-
 class Home extends Component {
-
   onPressLiveImage = () => {
     this.props.navigation.navigate('LiveClass')
   }
@@ -58,6 +40,10 @@ class Home extends Component {
       </View>
       
     </View>
+  };
+
+  static navigationOptions = {
+    title: 'Home',
   };
 
   render() {

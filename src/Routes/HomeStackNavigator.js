@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import React, {Component} from 'react'
-import {Text, View, StyleSheet, Button} from 'react-native'
+import {Text, View, StyleSheet, Button, Image} from 'react-native'
 import 'react-native-gesture-handler';
 import Login from '../ViewControllers/Authentication/Login.js';
 import ForgotPassword from '../ViewControllers/Authentication/ForgotPassword.js';
@@ -12,14 +12,22 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import DrawerNavigtor from './SideMenuDrawer.js';
 import Home from '../ViewControllers/Tabbar/Home.js';
 import LiveClass from '../ViewControllers/Tabbar/WebView/LiveClass.js';
+import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';  
+import Constant, { Images } from '../Utility/Constant.js'
 
 const AppNavigator = createStackNavigator(
     {
         Home: {
             screen: Home,
-            navigationOptions: {
-                headerShown: false,
-            }
+            navigationOptions: ({ navigation }) => ({
+                headerLeft: (
+                    <View>
+                        <TouchableOpacity onPress={() => navigation.navigate('DrawerOpen')}>
+                            <Image style={styles.sideMenu} source={Images.menu}></Image>
+                        </TouchableOpacity>
+                    </View>
+                ),
+              }),
         },
        LiveClass : {
             screen: LiveClass,
@@ -36,6 +44,15 @@ const AppNavigator = createStackNavigator(
 const HomeAppNavigator = createAppContainer(AppNavigator);
 
 export default HomeAppNavigator;
+
+var styles = StyleSheet.create({
+
+    sideMenu: {
+        width: 100, 
+        height: 40, 
+        resizeMode: 'contain'
+    }
+})
 
 // const Stack = createStackNavigator();
 // const Drawer = createDrawerNavigator();

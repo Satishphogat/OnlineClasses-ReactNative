@@ -12,6 +12,7 @@ export const Images = {
     profile: require('../Assets/Images/profile.jpg'),
     play: require('../Assets/Images/play.png'),
     math: require('../Assets/Images/math.jpg'),
+    menu: require('../Assets/Images/sideMenu.png'),
 };
 
 export default CustomColor = {
