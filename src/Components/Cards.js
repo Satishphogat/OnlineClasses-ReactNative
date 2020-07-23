@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, Image } from 'react-native';
 import Constant, { Images } from '../Utility/Constant.js'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const DATA = [
   {
@@ -16,6 +17,17 @@ const DATA = [
 
 class Cards extends Component {
 
+  constructor(props){
+    super(props);
+  }
+
+  handlePress = () => {
+    // Need to check to prevent null exception. 
+    this.props.onPress?.(); // Same as this.props.onPress && this.props.onPress();
+    // alert('success')
+  }
+
+
   render() {
     return (
       <FlatList 
@@ -23,7 +35,9 @@ class Cards extends Component {
       data = {DATA}
       horizontal={true}
       renderItem={({item}) => 
+      <TouchableOpacity onPress={this.handlePress}>
       <Image style={styles.card} source={Images.math}></Image>
+      </TouchableOpacity>
       // <Text style={styles.card}>{item.title}</Text>
     }></FlatList>
     )}}

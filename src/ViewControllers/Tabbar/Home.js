@@ -7,7 +7,7 @@ import CustomColor, { Images } from '../../Utility/Constant.js';//'../../Utility
 import Cards from '../../Components/Cards.js';
 import { WebView } from "react-native-webview";
 import liveClass from './WebView/LiveClass.js'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import Constant from '../../Utility/Constant.js'
 import ClassDetail from './ClassDetail/ClassDetail.js'
 
@@ -48,6 +48,10 @@ class Home extends Component {
     title: 'Home',
   };
 
+  onPressClassDetail = () => {
+    this.props.navigation.navigate('ClassDetail')
+  }
+
   render() {
     return (
       <SafeAreaView>
@@ -58,8 +62,10 @@ class Home extends Component {
             { title: 'Upcomming classes', data: ['ALTERED'] },
             { title: 'Recent classes', data: ['BEST MEN'] },
           ]} 
+          onPress={() => alert('success')}
           renderItem={({ item }) => 
-          <Cards></Cards>
+          <Cards onPress={this.onPressClassDetail}>
+          </Cards>
         }
           renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
           ListHeaderComponent={this.liveClassView}
