@@ -36,7 +36,7 @@ const Data = [
 ]
 
 const options = {
-    title: 'Select Avatar',
+    title: 'Select Profile Picture',
     customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],
     storageOptions: {
       skipBackup: true,
@@ -72,7 +72,7 @@ export default class SideMenu extends Component {
         } else if (item.title == 'Profile') {
             this.props.navigation.navigate('Profile')
         } else {
-        alert(item.title);
+        alert('Work in progress');
     }
     }
 
@@ -85,7 +85,7 @@ export default class SideMenu extends Component {
             console.log('Response = ', response);
           
             if (response.didCancel) {
-              alert('User cancelled image picker');
+              console.log('User cancelled image picker');
             } else if (response.error) {
                 alert(response.error)
             } else if (response.customButton) {

@@ -26,7 +26,7 @@ class Home extends Component {
 
   liveClassView = () => {
   return <View style={styles.liveClass} >
-      <WebView source={{ uri: 'https://www.youtube.com' }} style={{flex: 1, justifyContent: 'center', height: 270}}    />
+      <WebView source={{ uri: 'https://www.youtube.com/watch?v=dBE2eZjf7Rw'}} style={{flex: 1, justifyContent: 'center', height: 270}}    />
       
       <View style={{ height: 270, backgroundColor: 'clear', position: 'absolute', justifyContent: 'center', alignItems: 'center'}}>
       <TouchableOpacity onPress={this.onPressLiveImage} style={{backgroundColor: 'clear', height: 270, width: Dimensions.get('window').width, justifyContent: 'center', alignItems: 'center'}}>
