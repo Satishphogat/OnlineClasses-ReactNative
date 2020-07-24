@@ -24,7 +24,7 @@ const AppNavigator = createStackNavigator(
             navigationOptions: ({ navigation }) => ({
                 headerLeft: (
                     <View>
-                        <TouchableOpacity onPress={() => navigation.navigate('DrawerOpen')}>
+                        <TouchableOpacity onPress={() => navigation.openDrawer()}>
                             <Image style={styles.sideMenu} source={Images.menu}></Image>
                         </TouchableOpacity>
                     </View>
