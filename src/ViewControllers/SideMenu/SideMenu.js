@@ -10,11 +10,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../Tabbar/Home.js'
 import Login from '../Authentication/Login.js'
 import ImagePicker from 'react-native-image-picker';
+import Profile from './Profile/Profile.js'
 
 const Data = [
     {
         title: 'Home',
         image: Images.home
+    },
+    {
+        title: 'Profile',
+        image: Images.profileIcon
     },
     {
         title: 'Notifications',
@@ -64,6 +69,8 @@ export default class SideMenu extends Component {
             this.logout();
         } else if (item.title == 'Home') {
             this.props.navigation.closeDrawer();
+        } else if (item.title == 'Profile') {
+            this.props.navigation.navigate('Profile')
         } else {
         alert(item.title);
     }

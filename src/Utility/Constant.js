@@ -14,6 +14,7 @@ export const Images = {
     math: require('../Assets/Images/math.jpg'),
     menu: require('../Assets/Images/sideMenu.png'),
     edit: require('../Assets/Images/edit.png'),
+    profileIcon: require('../Assets/Images/profileIcon.png'),
 };
 
 export default CustomColor = {

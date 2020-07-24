@@ -2,18 +2,21 @@ import React, {Component} from 'react'
 import { View, SafeAreaView, StyleSheet, Dimensions, Image, FlatList, Text } from 'react-native'
 import Constants, { Images, Fonts } from '../../../Utility/Constant.js'
 
-class ClassDetail extends Component {
+class Profile extends Component {
     render() {
         return (
             <SafeAreaView style={styles.safeArea}>
                  <View style = {styles.containerView}>
-                     <Image source={Images.math} style={{width: Dimensions.get('window').width, height: 200}}></Image>
+                     <Image source={Images.profile} style={{width: Dimensions.get('window').width, height: 200, resizeMode: 'contain'}}></Image>
                      <FlatList style={{top: 10, padding: 10}}
         data={[
-          {key: 'Subject', value: 'Math'},
-          {key: 'Teacher', value: 'Abc'},
-          {key: 'Start Time', value: '4 hours'},
-          {key: 'Remaining Time', value: '1 hours'},
+          {key: 'Name ', value: 'Sagar Kumar'},
+          {key: 'Roll No. ', value: '111213243123'},
+          {key: 'Father Name', value: 'Abc'},
+          {key: 'Mother Name', value: 'Abc'},
+          {key: 'Date Of Birth', value: '01/01/1994'},
+          {key: 'Class ', value: '10th'},
+          {key: 'Address ', value: '10, Sushant Lok, Gurgaon'},
         ]}
         renderItem={({item}) => 
         <View style={styles.cellContainer}>
@@ -29,7 +32,7 @@ class ClassDetail extends Component {
     }
 }
 
-export default ClassDetail;
+export default Profile;
 
 var styles = StyleSheet.create({
     safeArea: {

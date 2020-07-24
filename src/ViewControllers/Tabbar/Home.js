@@ -22,7 +22,6 @@ function Item({ title }) {
 class Home extends Component {
   onPressLiveImage = () => {
     this.props.navigation.navigate('LiveClass')
-    // this.props.navigation.navigate('ClassDetail')
   }
 
   liveClassView = () => {
