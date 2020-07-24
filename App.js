@@ -16,3 +16,8 @@ export default class App extends Component {
     )
   }
 }
+
+
+
+// https://github.com/react-native-community/react-native-image-picker
+// installed for ios

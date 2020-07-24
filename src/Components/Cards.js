@@ -24,7 +24,6 @@ class Cards extends Component {
   handlePress = () => {
     // Need to check to prevent null exception. 
     this.props.onPress?.(); // Same as this.props.onPress && this.props.onPress();
-    // alert('success')
   }
 
 

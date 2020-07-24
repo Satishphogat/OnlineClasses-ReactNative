@@ -9,6 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../Tabbar/Home.js'
 import Login from '../Authentication/Login.js'
+import ImagePicker from 'react-native-image-picker';
 
 const Data = [
     {
@@ -29,7 +30,22 @@ const Data = [
     },
 ]
 
+const options = {
+    title: 'Select Avatar',
+    customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],
+    storageOptions: {
+      skipBackup: true,
+      path: 'images',
+    },
+  };
+
+  
+
 export default class SideMenu extends Component {
+
+    state = {
+        avatarSource: String
+    }
 
     logout = () => {
 
@@ -53,6 +69,33 @@ export default class SideMenu extends Component {
     }
     }
 
+    onPressProfile = () => {
+       this.openSheet()
+    }
+
+    openSheet = () => {
+        ImagePicker.showImagePicker(options, (response) => {
+            console.log('Response = ', response);
+          
+            if (response.didCancel) {
+              alert('User cancelled image picker');
+            } else if (response.error) {
+                alert(response.error)
+            } else if (response.customButton) {
+                alert(response.customButton);
+            } else {
+              const source = { uri: response.uri };
+          
+              // You can also display the image using data:
+              // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+          
+              this.setState({
+                avatarSource: source,
+              });
+            }
+          });
+    }
+
     renderSeparatorView = () => {
         return (
             <View style={{
@@ -68,7 +111,9 @@ export default class SideMenu extends Component {
     headerView = () => {
         return (
             <View style={style.headerContainerView}>
+                <TouchableOpacity onPress={() => this.onPressProfile()}>
                 <Image style = {style.profileImage} source={Images.profile}></Image>
+                </TouchableOpacity>
                 <Text style = {style.profileText}>Sagar Kumar</Text>
             </View>
         )
