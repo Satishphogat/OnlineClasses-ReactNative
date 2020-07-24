@@ -13,6 +13,7 @@ export const Images = {
     play: require('../Assets/Images/play.png'),
     math: require('../Assets/Images/math.jpg'),
     menu: require('../Assets/Images/sideMenu.png'),
+    edit: require('../Assets/Images/edit.png'),
 };
 
 export default CustomColor = {

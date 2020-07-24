@@ -111,8 +111,9 @@ export default class SideMenu extends Component {
     headerView = () => {
         return (
             <View style={style.headerContainerView}>
-                <TouchableOpacity onPress={() => this.onPressProfile()}>
+                <TouchableOpacity style = {{flexDirection: 'row'}} onPress={() => this.onPressProfile()}>
                 <Image style = {style.profileImage} source={Images.profile}></Image>
+                <Image style = {style.editImage} source={Images.edit}></Image>
                 </TouchableOpacity>
                 <Text style = {style.profileText}>Sagar Kumar</Text>
             </View>
@@ -154,6 +155,14 @@ const style = StyleSheet.create({
         borderRadius: 65, 
         top: 10, 
         alignSelf: 'center'
+    },
+    editImage: {
+        width: 50, 
+        height: 50,
+        position: 'absolute',
+        resizeMode: 'contain',
+        top: 70,
+        left: -20
     },
     flatList: {
         padding: 20,
